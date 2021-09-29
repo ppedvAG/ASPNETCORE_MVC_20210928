@@ -1,3 +1,4 @@
+using ASPMVC_DependencyInjection_ServiceCollection_Samples.Models;
 using ASPMVC_DependencyInjection_ServiceCollection_Samples.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Westwind.AspNetCore.LiveReload;
 
 namespace ASPMVC_DependencyInjection_ServiceCollection_Samples
 {
@@ -24,13 +26,27 @@ namespace ASPMVC_DependencyInjection_ServiceCollection_Samples
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddRazorRuntimeCompilation();
 
             //Einbinden des TimeServices in unsere MVC-App
             services.AddSingleton<ITimeService, TimeService>();
+            services.AddSingleton<ICar, Car>();
 
             services.AddScoped<ITimeService, SecondTimeService>();
-            
+
+
+            //Beim Controller->Konstruktor passiert im Hintergrund (ControllerFactory) 
+            services.Configure<SampleWebSettings>(Configuration);
+
+            services.AddLiveReload(config =>
+            {
+                // optional - use config instead
+                config.LiveReloadEnabled = true;
+                //config.FolderToMonitor = Path.GetFullname(Path.Combine(Env.ContentRootPath,"..")) ;
+            });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +55,7 @@ namespace ASPMVC_DependencyInjection_ServiceCollection_Samples
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseLiveReload();
             }
             else
             {
@@ -46,6 +63,8 @@ namespace ASPMVC_DependencyInjection_ServiceCollection_Samples
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

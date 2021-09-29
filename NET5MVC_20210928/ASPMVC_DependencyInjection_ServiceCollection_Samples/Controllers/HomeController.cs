@@ -15,10 +15,18 @@ namespace ASPMVC_DependencyInjection_ServiceCollection_Samples.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ITimeService _timeService;
 
-        public HomeController(ILogger<HomeController> logger, ITimeService timeService)
+        private readonly ICar _car; //vw-polo-2018
+
+        public HomeController(ILogger<HomeController> logger, ITimeService timeService, ICar car)
         {
             _logger = logger;
             _timeService = timeService;
+            _car = car;
+        }
+
+        public IActionResult ShowCar()
+        {
+            return View(_car); //Car
         }
 
         public IActionResult Index()

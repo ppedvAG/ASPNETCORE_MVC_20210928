@@ -7,8 +7,8 @@ namespace ASPMVC_DependencyInjection_ServiceCollection_Samples.Services
 {
     public class Car : ICar
     {
-        public string Brand { get; set; }
-        public string Model { get; set; }
-        public int ConstructionYear { get; set; }
+        public string Brand { get; set; } = "VM";
+        public string Model { get; set; } = "Polo";
+        public int ConstructionYear { get; set; } = 2018;
     }
 }

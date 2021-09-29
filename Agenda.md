@@ -1,17 +1,19 @@
 ﻿PPEDV-Kurs: 28.09.2021 - MVC Kurs 
 
 TAG1:
-- [ ] Einführungs DI 
-- [ ] Dependency Injection / Seperation of Concerne (3 Stunden) 
-- [ ] Startup-Klasse
-- [ ] IServiceCollection / ServiceProvider
-- [ ] Konfigurationen einlesen -> Dependency Injcetion + Konfigurationen
+- [x] Einführungs DI 
+- [x] Dependency Injection / Seperation of Concerne (3 Stunden) 
+- [x] Startup-Klasse
+- [x] IServiceCollection / ServiceProvider
+- [x] Konfigurationen einlesen -> Dependency Injcetion + Konfigurationen
 - [ ] DI-SDependencyInjectionSamplepecials -> Mocks, Entwickler - Prozess
 - [ ] Präsentationsschicht (1 Stunde) 
 - [ ] Razor-Syntax / RazorEngine 
+- [ ] Bootstrap
 - [ ] MVC mit ViewModels
-- [ ] Einbinden einer HotReload Middleware
+- [O] Einbinden einer HotReload Middleware
 - [ ] Logging 
+- [ ] Umlauten
 
 Tag2:
 
@@ -19,13 +21,17 @@ Die Controller-Klasse (MVC)
 - [ ] Überblick über HTTPContext und Controller-Basisklasse
 - [ ] QueryString bei Get-Methoden
 - [ ] Ein Formular mit mehren Buttons (Post-Methoden)
-- [ ] PartialView
-- [ ] HTML-Helper
-- [ ] TagHelpers
 - [ ] Data Annotations 
 - [ ] Validierung 
 - [ ] Gehen Geldbeträge mit Komma?
 - [ ] Upload von Bilddateien + einfache Darstellung in einer Gallery
+
+- [ ] PartialView
+- [ ] HTML-Helper
+- [ ] TagHelpers
+
+
+
 
 State-Management
 - [ ] ViewData////
@@ -34,7 +40,7 @@ State-Management
 - [ ] Session-Handling -> Bauen einen Warenkorb (mit Artikel entfernen)
 
 Tag 3: 
-
+- [ ] Tabelle Sortierung, Pagging, Filtern direkt mit EFCore 
 - [ ] ViewComponents & Localization -> Referenz Projekte anschauen
 - [ ] Identity UI in ASP.NET Core MVC -> weitere UseCases zu PartialView
 
