@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <!-- Hier definiere ich meine Tabellenspalten -->
+        <tr>
+            <th>
+                <!-- Ich repräsentiere eine Tabellenspalte-->
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+
+            <th>
+                <!-- Ich repräsentiere eine Tabellenspalte-->
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                <!-- Ich repräsentiere eine Tabellenspalte-->
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+        </tr>
+    </thead>
+
+    @*// @Html.DisplayNameFor -> Variablenname wird ausgegeben
+    // @Html.DisplayFor -> Variableninhalt wird ausgegeben*@ 
+
+    <tbody>
+        @foreach (Movie currentMovie in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => currentMovie.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => currentMovie.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => currentMovie.Price)
+                </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+

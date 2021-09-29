@@ -1,0 +1,13 @@
+﻿@model IEnumerable<WeatherForecast>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@foreach (WeatherForecast currentForeCast in Model)
+{
+    @currentForeCast.Date
+    <br />
+    @currentForeCast.Summary
+}

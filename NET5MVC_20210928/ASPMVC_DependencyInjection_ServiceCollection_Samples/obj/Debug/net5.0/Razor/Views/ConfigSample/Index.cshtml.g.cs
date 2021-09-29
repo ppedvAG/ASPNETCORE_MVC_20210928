@@ -26,8 +26,15 @@ using ASPMVC_DependencyInjection_ServiceCollection_Samples.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\ASPMVC_DependencyInjection_ServiceCollection_Samples\Views\_ViewImports.cshtml"
+using ASPMVC_DependencyInjection_ServiceCollection_Samples.Services;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bbde7bc0bf68e822b945e0f41df68430b3f63cc9", @"/Views/ConfigSample/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"07de016bd17864aaf1775d19ddbc99f5d8f4f2c1", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1c945ffcee02e8bde8e71f2218988049fb909c36", @"/Views/_ViewImports.cshtml")]
     public class Views_ConfigSample_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ASPMVC_DependencyInjection_ServiceCollection_Samples.Models.PositionOptions>
     {
         #pragma warning disable 1998
