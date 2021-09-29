@@ -6,11 +6,11 @@ TAG1:
 - [x] Startup-Klasse
 - [x] IServiceCollection / ServiceProvider
 - [x] Konfigurationen einlesen -> Dependency Injcetion + Konfigurationen
-- [ ] DI-SDependencyInjectionSamplepecials -> Mocks, Entwickler - Prozess
-- [ ] Präsentationsschicht (1 Stunde) 
-- [ ] Razor-Syntax / RazorEngine 
+- [x] DI-SDependencyInjectionSamplepecials -> Mocks, Entwickler - Prozess
+- [x] Präsentationsschicht (1 Stunde) 
+- [x] Razor-Syntax / RazorEngine 
 - [ ] Bootstrap
-- [ ] MVC mit ViewModels
+- [x] MVC mit ViewModels
 - [O] Einbinden einer HotReload Middleware
 - [ ] Logging 
 - [ ] Umlauten
@@ -19,9 +19,10 @@ Tag2:
 
 Die Controller-Klasse (MVC)
 - [ ] Überblick über HTTPContext und Controller-Basisklasse
-- [ ] QueryString bei Get-Methoden
-- [ ] Ein Formular mit mehren Buttons (Post-Methoden)
-- [ ] Data Annotations 
+- [O] QueryString bei Get-Methoden
+- [x] Ein Formular mit mehren Buttons (Post-Methoden)
+- [x] Data Annotations 
+- [ ] Übung Gästebuch (GET/POST) + EFCore(Model erstellen, DbContext-Klasse, Rollout auf DB)
 - [ ] Validierung 
 - [ ] Gehen Geldbeträge mit Komma?
 - [ ] Upload von Bilddateien + einfache Darstellung in einer Gallery
@@ -29,9 +30,6 @@ Die Controller-Klasse (MVC)
 - [ ] PartialView
 - [ ] HTML-Helper
 - [ ] TagHelpers
-
-
-
 
 State-Management
 - [ ] ViewData////
@@ -53,7 +51,7 @@ Tag 3:
 - [ ] Filter -> https://docs.microsoft.com/de-de/aspnet/core/mvc/controllers/filters?view=aspnetcore-5.0#resource-filters
 - [ ] AuthorisationFilter Sample (Read and Write Sample)
 
-- [ ] EF Core Einstieg 
+- [ ] EF Core Einstieg (flexibel)
   - [ ] Code First / Code First Reverse
   - [ ] Repository / UnitOfWork Pattern in EF
   - [ ] Add-Migration + Update-Database im Bezug auf eine DBContext 
@@ -61,6 +59,3 @@ Tag 3:
 
 - Abschlus
   - [ ] ViewModels / Relation -> University-Beispiel
-
-
-- 
