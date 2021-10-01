@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -51,9 +53,37 @@ namespace MovieMVCApp.Controllers
             return View(movie);
         }
 
-
+        [HttpPost]
         public IActionResult Buy(int? id)
         {
+            if (!id.HasValue)
+            {
+                return BadRequest(); //Fehlercode 400
+            }
+
+            //Ist Session verfügbar
+            if (HttpContext.Session.IsAvailable)
+            {
+                IList<int> idList = new List<int>();
+
+
+                //Ist schon ein Einkaufwagen (ShoppingCart) verfügbar 
+                if (HttpContext.Session.Keys.Contains("ShoppingCart"))
+                {
+                    //Wollen bishere einkaufe auslesen
+                    string jsonIdList = HttpContext.Session.GetString("ShoppingCart");
+
+                    //bekommen eine Id-Liste mit allen vorhandenen Artikel im Warenkorb
+                    idList = JsonSerializer.Deserialize<List<int>>(jsonIdList);
+                }
+
+                //Artikel wird dem Warenkorb hinzugefügt
+                idList.Add(id.Value);
+
+                string jsonString = JsonSerializer.Serialize(idList);
+
+                HttpContext.Session.SetString("ShoppingCart", jsonString);
+            }
 
             return RedirectToAction(nameof(Index));
         }

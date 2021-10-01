@@ -152,3 +152,4 @@ C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\MovieMVCApp\obj\Debug
 C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\MovieMVCApp\bin\Debug\net5.0\libman.json
 C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\MovieMVCApp\obj\Debug\net5.0\MovieMVCApp.csproj.AssemblyReference.cache
 C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\MovieMVCApp\obj\Debug\net5.0\Razor\Views\Shared\_LowestPriceOfferPartial.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\MovieMVCApp\obj\Debug\net5.0\Razor\Views\ShoppingPayment\ShoppingCartOverview.cshtml.g.cs

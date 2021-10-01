@@ -27,10 +27,12 @@ namespace MovieMVCApp
         {
             services.AddControllersWithViews();
 
+
+            //AddScope wird intern verwenden
             services.AddDbContext<MovieDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MovieDbContext")));
 
-
+            services.AddSession();
             //Wenn wir eine InMemory Datenbank verwenden möchten
             //services.AddDbContext<MovieDbContext>(options =>
             //        options.UseInMemoryDatabase("MovieDB"));
@@ -55,7 +57,7 @@ namespace MovieMVCApp
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
