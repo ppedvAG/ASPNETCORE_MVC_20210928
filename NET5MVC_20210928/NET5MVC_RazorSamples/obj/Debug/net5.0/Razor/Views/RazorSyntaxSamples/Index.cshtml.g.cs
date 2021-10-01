@@ -34,6 +34,13 @@ using NET5MVC_RazorSamples.ViewModels;
 #line hidden
 #nullable disable
 #nullable restore
+#line 4 "C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\Views\_ViewImports.cshtml"
+using NET5MVC_RazorSamples.TagHelpers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 226 "C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\Views\RazorSyntaxSamples\Index.cshtml"
 using NET5MVC_RazorSamples.Services;
 
@@ -41,7 +48,7 @@ using NET5MVC_RazorSamples.Services;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"54393c77f6161fbbf3fae037927ef18106e93501", @"/Views/RazorSyntaxSamples/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"44b708100ee19c52503173738a0902835537251d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"883341c8ea6b19e32a7c8a69a6559fea7f912878", @"/Views/_ViewImports.cshtml")]
     public class Views_RazorSyntaxSamples_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Person>>
     {
         #line hidden
@@ -507,7 +514,7 @@ else
 #line hidden
 #nullable disable
             WriteLiteral(" //Dispose\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54393c77f6161fbbf3fae037927ef18106e9350117956", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54393c77f6161fbbf3fae037927ef18106e9350118182", async() => {
                 WriteLiteral("\r\n");
             }
             );

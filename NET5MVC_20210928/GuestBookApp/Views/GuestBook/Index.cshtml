@@ -1,0 +1,37 @@
+﻿@model IEnumerable<GuestBookApp.Models.GuestBookEntry>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Gästebuch</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@*<form method="post" asp-action="Index">
+    <label asp-for="@Model.LastOrDefault().Text" class="control-label"></label>
+    <input asp-for="@Model.LastOrDefault().Text" class="form-control" />
+</form>*@

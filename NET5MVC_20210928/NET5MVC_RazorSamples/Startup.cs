@@ -28,6 +28,8 @@ namespace NET5MVC_RazorSamples
 
 
             services.AddScoped<IWeatherForecastService, WeatherForecastService>();
+
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +51,8 @@ namespace NET5MVC_RazorSamples
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
+            AppDomain.CurrentDomain.SetData("BildVerzeichnis", env.WebRootPath);
 
             app.UseEndpoints(endpoints =>
             {

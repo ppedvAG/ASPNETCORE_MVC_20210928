@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "TempDataThirdSample";
+    //string email = TempData["EmailAddress"].ToString();
+    //int id = Convert.ToInt32(TempData["Id"]);
+}
+
+<h1>TempDataThirdSample</h1>
+
+@TempData.Peek("EmailAdress");
+
+@TempData.Peek("Id");

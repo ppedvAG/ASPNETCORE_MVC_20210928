@@ -31,7 +31,24 @@ namespace GuestBookApp.Controllers
             _bookDbContext.GuestBook.Add(newPost);
             await _bookDbContext.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index)); //Rufen hier die Get-Methode Index auf -> Zeile 22
+        }
+
+
+        [HttpGet]
+        public IActionResult Create() //Zeigt Formular an 
+        {
+            return View();
+        }
+
+        [HttpPost] 
+        public async Task<IActionResult> Create(GuestBookEntry newPost) //Formular <form> -> wird von Browser an WebServer übertragen 
+        {
+            
+            _bookDbContext.GuestBook.Add(newPost);
+            await _bookDbContext.SaveChangesAsync(); //Hier wird der Datensatz (SQL) zur Datenbank übertragen und Datensatz wird in DB angelegt.
+           
+            return RedirectToAction(nameof(Index)); //Rufen hier die Get-Methode Index auf -> Zeile 22
         }
     }
 }

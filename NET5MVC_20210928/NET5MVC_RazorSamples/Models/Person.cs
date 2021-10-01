@@ -11,6 +11,10 @@ namespace NET5MVC_RazorSamples.Models
         public int Age { get; set; }
         public string Email { get; set; }
 
+        public Person()
+        {
+        }
+
         public Person(string name, int age)
         {
             Name = name;

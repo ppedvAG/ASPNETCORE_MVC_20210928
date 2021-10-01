@@ -16,20 +16,20 @@ TAG1:
 - [ ] Umlauten
 
 Tag2:
-
 Die Controller-Klasse (MVC)
 - [ ] Überblick über HTTPContext und Controller-Basisklasse
 - [O] QueryString bei Get-Methoden
 - [x] Ein Formular mit mehren Buttons (Post-Methoden)
 - [x] Data Annotations 
-- [ ] Übung Gästebuch (GET/POST) + EFCore(Model erstellen, DbContext-Klasse, Rollout auf DB)
-- [ ] Validierung 
-- [ ] Gehen Geldbeträge mit Komma?
-- [ ] Upload von Bilddateien + einfache Darstellung in einer Gallery
+- [x] Übung Gästebuch (GET/POST) + EFCore(Model erstellen, DbContext-Klasse, Rollout auf DB)
+- [x] Validierung 
+- [x] Gehen Geldbeträge mit Komma?
+- [x] Upload von Bilddateien + einfache Darstellung in einer Gallery
 
-- [ ] PartialView
-- [ ] HTML-Helper
-- [ ] TagHelpers
+- [x] PartialView
+  - [ ] PartialView with jQuery - Ajax Call
+- [x HTML-Helper
+- [x] TagHelpers
 
 State-Management
 - [ ] ViewData////
@@ -54,7 +54,7 @@ Tag 3:
 - [ ] EF Core Einstieg (flexibel)
   - [ ] Code First / Code First Reverse
   - [ ] Repository / UnitOfWork Pattern in EF
-  - [ ] Add-Migration + Update-Database im Bezug auf eine DBContext 
+  - [x] Add-Migration + Update-Database im Bezug auf eine DBContext 
 
 
 - Abschlus

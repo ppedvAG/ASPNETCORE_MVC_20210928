@@ -114,6 +114,16 @@ C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\
 C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\NET5MVC_RazorSamples.pdb
 C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\NET5MVC_RazorSamples.genruntimeconfig.cache
 C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\RazorSyntaxSamples\Index.cshtml.g.cs
-C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\NET5MVC_RazorSamples.csproj.AssemblyReference.cache
 C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\TableSample\Index.cshtml.g.cs
 C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\TableSample\ShowViewModelAsTable.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\Photo\UploadPicture.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\Photo\PictureGallery.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\Shared\_DateTimePartial.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\NET5MVC_RazorSamples.csproj.AssemblyReference.cache
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\StateManagement\ViewDataSample.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\StateManagement\ViewBagSample.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\StateManagement\TempDataSample.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\StateManagement\TempDataSecondSample.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\StateManagement\TempDataThirdSample.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\StateManagement\SessionResult.cshtml.g.cs
+C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\NET5MVC_RazorSamples\obj\Debug\net5.0\Razor\Views\StateManagement\SessionStart.cshtml.g.cs

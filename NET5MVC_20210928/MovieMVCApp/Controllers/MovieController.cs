@@ -85,13 +85,30 @@ namespace MovieMVCApp.Controllers
 
         public async Task<IActionResult> Create([Bind("Id,Title,Description,GenreType,Price,IMDBRating")] Movie movie)
         {
-            //string myTilte = Request.Form["Title"];
+            //Document 
+            // Key / Value
+            // Title | Star Wars
+            // Description | Rückkehr der Jedi-Ritter
 
-            if (ModelState.IsValid)
+
+            //string myTilte = Request.Form["Title"];
+            //string myDescription = Request.Form["Title"];
+
+            //Movie movie = new Movie(myTitle, myDescription....)
+
+            //Ich will eine Blackliste mit verwenden, die z.b den Film XYZ nicht hinzufügbar machen möchte
+            if (movie.Title == "The Crow")
+            {
+                //AddModelError führt dazu, dass IsValid auf false gesetzt wird
+                ModelState.AddModelError("Title", "Dieser Filmtitel steht auf dem Index");
+            }
+
+            //Serverseitig Valdierung ->
+            if (ModelState.IsValid) //Ob alle DataAnnotations erfüllt wurden
             {
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index)); //GET Methode -Index (Zeige mir die Tabelle mit allen Movies an) 
             }
             return View(movie);
         }

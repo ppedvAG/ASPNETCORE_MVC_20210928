@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "TempDataSample";
+
+    //string email = TempData["EmailAddress"].ToString();
+    //int id = Convert.ToInt32(TempData["Id"]);
+
+    //TempData.Keep(); //Erhalte ALLE Einträge in TempData -> Bedeutet -> Einträge können jeweils nochmal 1x augerfugen werden und werden danach gelöscht
+}
+
+<h1>TempDataSample</h1>
+
+
+@TempData.Peek("EmailAdress");
+
+@TempData.Peek("Id");

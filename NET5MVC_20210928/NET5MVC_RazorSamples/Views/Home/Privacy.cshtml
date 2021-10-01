@@ -1,6 +1,41 @@
-﻿@{
+﻿@using NET5MVC_RazorSamples.TagHelpers
+@using Microsoft.AspNetCore.Http;
+
+@{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+
+@Html.HelloWorldHTMLString()
+<p>Use this page to detail your site's privacy policy.</p>
+@Html.HelloWorldString()
+<p>Use this page to detail your site's privacy policy.</p>
+@Html.HelloWorld("von Köppenick")
+<p>Use this page to detail your site's privacy policy.</p>
+
+
+
+
+@{
+    WebsiteContext webContext = new WebsiteContext
+    {
+        Version = new Version(1, 3),
+        CopyrightYear = 2021,
+        Approved = true,
+        TagsToShow = 131
+    };
+}
+
+
+
+<h1>CustomizeTagHelperSample</h1>
+
+<website-information info="webContext"></website-information>
+
+
+
+@Context.Session.GetInt32("Lottozahlen")
+@Context.Session.GetString("Lottogewinner").ToString()

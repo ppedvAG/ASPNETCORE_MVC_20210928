@@ -27,7 +27,7 @@ namespace MovieMVCApp.Models
         [DisplayName("Genre Typ")] //System.ComponentModel;
         public Genre GenreType { get; set; }
 
-        [Range(1, 10, ErrorMessage = "Dies ist ein Movie Store, der abnormale Preise nicht zulässt und nichts verschenkt")]
+        //[Range(1, 10, ErrorMessage = "Dies ist ein Movie Store, der abnormale Preise nicht zulässt und nichts verschenkt")]
         public decimal Price { get; set; }
 
         [Range(1, 9)]
