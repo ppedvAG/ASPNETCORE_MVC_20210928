@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MovieMVCApp.Data;
+using MovieMVCApp.Helpers;
 using MovieMVCApp.Models;
 
 namespace MovieMVCApp.Controllers
@@ -22,17 +23,73 @@ namespace MovieMVCApp.Controllers
         }
 
         // GET: Movie
-        public async Task<IActionResult> Index(string query)
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["CurrentFilter"] = searchString; 
+
+            ViewData["TitleSortParm"] = sortOrder == "Title" ? "title_desc" : "Title";
+            ViewData["DescriptionParm"] = sortOrder == "Description" ? "description_desc" : "Description";
+            ViewData["PriceSortParm"] = sortOrder == "Price" ? "price_desc" : "Price";
+            ViewData["GenreTypeSortParm"] = sortOrder == "GenreType" ? "genretype_desc" : "GenreType";
+            
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
             //Hier darf ein Feature programmiert werden, dass mithilfe von ViewData realisiert 
             //Wir wollen den Suchbegriff in der Textbox angezeigt bekommen, wenn die Suchliste gefilter dargestellt wird
 
-            IList<Movie> filteredList = string.IsNullOrEmpty(query) ? 
-                await _context.Movie.ToListAsync() : 
-                await _context.Movie.Where(q => q.Title.Contains(query) || q.Description.Contains(query)).ToListAsync();
-           
-            
-            return View(filteredList);
+            //IList<Movie> filteredList = string.IsNullOrEmpty(searchString) ? 
+            //    await _context.Movie.ToListAsync() : 
+            //    await _context.Movie.Where(q => q.Title.Contains(searchString) || q.Description.Contains(searchString)).ToListAsync();
+
+
+            IQueryable<Movie> movies = _context.Movie.AsQueryable<Movie>();
+
+            //List<Movie> movies = _context.Movie.ToList();
+
+            switch (sortOrder)
+            {
+                case "Title":
+                    movies = movies.OrderBy(s => s.Title); //bei List<Movie> movies = _context.Movie.ToList(); (muss)->  movies = movies.OrderBy(s => s.Title).ToList();
+                    break;
+                case "title_desc":
+                    movies = movies.OrderByDescending(s => s.Title);
+                    break;
+                case "Description":
+                    movies = movies.OrderBy(s => s.Description);
+                    break;
+                case "description_desc":
+                    movies = movies.OrderByDescending(s => s.Description);
+                    break;
+                case "Price":
+                    movies = movies.OrderBy(s => s.Price);
+                    break;
+                case "price_desc":
+                    movies = movies.OrderByDescending(s => s.Price);
+                    break;
+                case "GenreType":
+                    movies = movies.OrderBy(s => s.GenreType);
+                    break;
+                case "genretype_desc":
+                    movies = movies.OrderByDescending(s => s.GenreType);
+                    break;
+                default:
+                    movies = movies.OrderBy(s => s.Id);
+                    break;
+            }
+            int pageSize = 3;
+
+            //pageNumber ?? 1
+
+
+            return View(await PaginatedList<Movie>.CreateAsync(movies.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Movie/Details/5
