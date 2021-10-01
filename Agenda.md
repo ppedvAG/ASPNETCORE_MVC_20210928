@@ -27,26 +27,26 @@ Die Controller-Klasse (MVC)
 - [x] Upload von Bilddateien + einfache Darstellung in einer Gallery
 
 - [x] PartialView
-  - [ ] PartialView with jQuery - Ajax Call
+  - [x] PartialView with jQuery - Ajax Call
 - [x HTML-Helper
 - [x] TagHelpers
 
 State-Management
-- [ ] ViewData////
-- [ ] ViewBag
-- [ ] TempData
-- [ ] Session-Handling -> Bauen einen Warenkorb (mit Artikel entfernen)
+- [x] ViewData////
+- [x] ViewBag
+- [x] TempData
+- [x] Session-Handling -> Bauen einen Warenkorb (mit Artikel entfernen)
 
 Tag 3: 
-- [ ] Tabelle Sortierung, Pagging, Filtern direkt mit EFCore 
-- [ ] ViewComponents & Localization -> Referenz Projekte anschauen
-- [ ] Identity UI in ASP.NET Core MVC -> weitere UseCases zu PartialView
+- [x] Tabelle Sortierung, Pagging, Filtern direkt mit EFCore 
+- [x] ViewComponents & Localization -> Referenz Projekte anschauen
+- [x] Identity UI in ASP.NET Core MVC -> weitere UseCases zu PartialView
 
 - Routing
-- [ ] Konventionelles Routing
-- [ ] Attribute Routing
-- [ ] Middleware -> Was ist ein Pipeline (Use, Run, Map)
-- [ ] Customize Middleware für formatierte Bildausgaben (Gallery)+ In Verbindung mit einem Bild-Upload-Formular
+- [x] Konventionelles Routing
+- [x] Attribute Routing
+- [Montag] Middleware -> Was ist ein Pipeline (Use, Run, Map)
+- [Montag] Customize Middleware für formatierte Bildausgaben (Gallery)+ In Verbindung mit einem Bild-Upload-Formular
 
 - [ ] Filter -> https://docs.microsoft.com/de-de/aspnet/core/mvc/controllers/filters?view=aspnetcore-5.0#resource-filters
 - [ ] AuthorisationFilter Sample (Read and Write Sample)

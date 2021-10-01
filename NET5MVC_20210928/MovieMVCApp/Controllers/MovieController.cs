@@ -92,7 +92,20 @@ namespace MovieMVCApp.Controllers
             return View(await PaginatedList<Movie>.CreateAsync(movies.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
+        public IActionResult GetPartial()
+        {
+            List<string> countries = new List<string>();
+            countries.Add("USA");
+            countries.Add("Germany");
+            countries.Add("India");
+
+            return PartialView("_CountriesPartialView", countries);
+
+        }
         // GET: Movie/Details/5
+
+
+        [HttpGet("/movie/details/{id}")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -110,7 +123,7 @@ namespace MovieMVCApp.Controllers
             return View(movie);
         }
 
-        [HttpPost]
+        [HttpPost("/movie/buy")]
         public IActionResult Buy(int? id)
         {
             if (!id.HasValue)
@@ -159,6 +172,7 @@ namespace MovieMVCApp.Controllers
 
 
         // GET: Movie/Create
+        [HttpGet("/movie/create")]
         public IActionResult Create() //Sende das Formular(Html-Seite mit Formular) an den Browser
         {
             return View();
@@ -167,7 +181,7 @@ namespace MovieMVCApp.Controllers
         // POST: Movie/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598. //Benutzer füllt das Formular aus und klick den Button (submit) -> Der Browser sendet das Formular an den WebServer 
-        [HttpPost]
+        [HttpPost("/movie/create")]
         [ValidateAntiForgeryToken]
 
         public async Task<IActionResult> Create([Bind("Id,Title,Description,GenreType,Price,IMDBRating")] Movie movie)
@@ -200,6 +214,8 @@ namespace MovieMVCApp.Controllers
             return View(movie);
         }
 
+
+        [HttpPost("/movie/randomcreate")]
         public async Task<IActionResult> RandomCreate(Movie movie)
         {
             string[] movieNames = { "Star Wars", "Scary Movie", "Old School", "Die Erde", "Herr der Ringe" };
@@ -241,6 +257,7 @@ namespace MovieMVCApp.Controllers
 
 
         // GET: Movie/Edit/5
+        [HttpGet("/movie/edit/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -259,7 +276,7 @@ namespace MovieMVCApp.Controllers
         // POST: Movie/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("/movie/edit/{id}")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,GenreType,Price,IMDBRating")] Movie movie)
         {
@@ -292,6 +309,9 @@ namespace MovieMVCApp.Controllers
         }
 
         // GET: Movie/Delete/5
+
+
+        [HttpGet("/movie/delete/{id}")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -310,7 +330,8 @@ namespace MovieMVCApp.Controllers
         }
 
         // POST: Movie/Delete/5
-        [HttpPost, ActionName("Delete")]
+        //[HttpPost, ActionName("Delete")]
+        [HttpPost("/movie/Delete/{id}"), ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

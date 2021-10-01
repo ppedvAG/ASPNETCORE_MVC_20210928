@@ -92,5 +92,11 @@ namespace MovieMVCApp.Controllers
 
             return RedirectToAction(nameof(ShoppingCartOverview));
         }
+
+
+        public IActionResult Payment()
+        {
+            return View();
+        }
     }
 }

@@ -26,8 +26,15 @@ using MovieMVCApp.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Aktueller Kurs\ASPNETCORE_MVC_20210928\NET5MVC_20210928\MovieMVCApp\Views\_ViewImports.cshtml"
+using MovieMVCApp.Helpers;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d4c3d52fe10c83bd5c6eddea52a4a01786dac4cb", @"/Views/Shared/_LowestPriceOfferPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c33be7155b291fdd2eb6222b9056f28130c699f9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"210b973e1deef775f0ffa364009742e304e1c887", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__LowestPriceOfferPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<MovieMVCApp.Models.Movie>>
     {
         #pragma warning disable 1998

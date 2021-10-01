@@ -10,6 +10,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MovieMVCApp.Data;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
 
 namespace MovieMVCApp
 {
@@ -26,16 +29,31 @@ namespace MovieMVCApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
+            services.AddRazorPages();
 
             //AddScope wird intern verwenden
             services.AddDbContext<MovieDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MovieDbContext")));
 
+            services.AddAuthentication();
             services.AddSession();
             //Wenn wir eine InMemory Datenbank verwenden möchten
             //services.AddDbContext<MovieDbContext>(options =>
             //        options.UseInMemoryDatabase("MovieDB"));
+
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                CultureInfo[] supportedCultures = new[]
+                {
+                    new CultureInfo("en"),
+                    new CultureInfo("de"),
+                    new CultureInfo("fr")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture("de");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,14 +73,24 @@ namespace MovieMVCApp
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
 
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseSession();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                     name: "movie",
+                     pattern: "movie/{*movie}", defaults: new { controller = "Movie", action = "Index" });
+
+
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapRazorPages();
             });
         }
     }

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a asp-controller="demo" asp-action="index" asp-route-culture="en-US">English</a>
+<a asp-controller="demo" asp-action="index" asp-route-culture="ja-JP">Japanese</a>
+<a asp-controller="demo" asp-action="index" asp-route-culture="fr-FR">French</a>
+<a asp-controller="demo" asp-action="index" asp-route-culture="de-DE">German</a>
+<br />
+<br />
+@SharedLocalizer["Msg"]
+<br />
+    Price: @ViewBag.price.ToString("c")
+    <br />
+    Number: @ViewBag.number.ToString("n")
+    <br />
+    Percent: @ViewBag.percent.ToString("p")
+    <br />
+    Date: @ViewBag.now.ToString("F")
